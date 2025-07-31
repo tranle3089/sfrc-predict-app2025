@@ -59,58 +59,7 @@ st.markdown("""
         }
     </style>
     """, unsafe_allow_html=True)
-spinner_html = """
-<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:130px">
-  <div class="lds-spinner">
-    <div></div><div></div><div></div><div></div><div></div><div></div>
-    <div></div><div></div><div></div><div></div><div></div><div></div>
-  </div>
-  <div style="margin-top:18px;font-weight:700;color:#c2410c;font-size:1.1rem;">Processing...</div>
-</div>
-<style>
-.lds-spinner {
-  color: official;
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
-.lds-spinner div {
-  transform-origin: 40px 40px;
-  animation: lds-spinner 1.2s linear infinite;
-  position: absolute;
-}
-.lds-spinner div:after {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 3px; left: 37px;
-  width: 6px; height: 18px;
-  border-radius: 20%;
-  background: #c2410c;
-}
-.lds-spinner div:nth-child(1) { transform: rotate(0deg); animation-delay: -1.1s; }
-.lds-spinner div:nth-child(2) { transform: rotate(30deg); animation-delay: -1s; }
-.lds-spinner div:nth-child(3) { transform: rotate(60deg); animation-delay: -0.9s; }
-.lds-spinner div:nth-child(4) { transform: rotate(90deg); animation-delay: -0.8s; }
-.lds-spinner div:nth-child(5) { transform: rotate(120deg); animation-delay: -0.7s; }
-.lds-spinner div:nth-child(6) { transform: rotate(150deg); animation-delay: -0.6s; }
-.lds-spinner div:nth-child(7) { transform: rotate(180deg); animation-delay: -0.5s; }
-.lds-spinner div:nth-child(8) { transform: rotate(210deg); animation-delay: -0.4s; }
-.lds-spinner div:nth-child(9) { transform: rotate(240deg); animation-delay: -0.3s; }
-.lds-spinner div:nth-child(10) { transform: rotate(270deg); animation-delay: -0.2s; }
-.lds-spinner div:nth-child(11) { transform: rotate(300deg); animation-delay: -0.1s; }
-.lds-spinner div:nth-child(12) { transform: rotate(330deg); animation-delay: 0s; }
-@keyframes lds-spinner {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
-}
-</style>
-"""
-
-
 def show(model_CS, model_ST, model_FC):
-    # Không load lại model ở đây!
     st.markdown("---")
     st.markdown("### Concrete Matrix")
     col1, col2, col3 = st.columns(3)
@@ -145,11 +94,7 @@ def show(model_CS, model_ST, model_FC):
     input_data = np.array([[W, C, S, CA, smax, SP, pf, Vf, df, Lf]])
 
     if st.button("🔍 Predict"):
-        loading_placeholder = st.empty()
-        loading_placeholder.markdown(spinner_html, unsafe_allow_html=True)
-        time.sleep(2)
-        loading_placeholder.empty()
-
+        # BỎ spinner và time.sleep hoàn toàn
         cs_pred = model_CS.predict(input_data)[0]
         st_pred = model_ST.predict(input_data)[0]
         fc_pred = model_FC.predict(input_data)[0]
@@ -182,4 +127,5 @@ def show(model_CS, model_ST, model_FC):
             """,
             unsafe_allow_html=True
         )
+
 
