@@ -157,38 +157,36 @@ def show(model_CS, model_ST, model_FC):
     st.markdown("---")
     input_data = np.array([[W, C, S, CA, smax, SP, pf, Vf, df, Lf]])
 
-    if st.button("🔍 Predict"):
+    if st.button("🔍 Predict All"):
         cs_pred = model_CS.predict(input_data)[0]
         st_pred = model_ST.predict(input_data)[0]
         fc_pred = model_FC.predict(input_data)[0]
-
+    
         st.markdown("""
-        <div style="background-color:#e6f9eb; border-radius: 13px; padding: 1.0rem 1.0rem; margin-bottom:1rem; color:#20723a; font-weight: 700; font-size: 1.1rem; border: 1.0px solid #74c99e;">
-            ✅ Results
+        <div style="background-color:#e6f9eb; border-radius: 13px; padding: 1.0rem 1.5rem; margin-bottom:1rem; color:#20723a; font-weight: 700; font-size: 1.1rem; border: 1.5px solid #74c99e;">
+            ✅ Prediction Results
         </div>
         """, unsafe_allow_html=True)
-
         st.markdown(
-            f"""
-            <div class="result-card-row" style="flex-direction:column;gap:1.0rem;">
-                <div class="result-card" style="width:100%;max-width:unset;margin:0;">
+            f'''
+            <div class="result-card-row">
+                <div class="result-card">
                     <div class="result-label">Compressive Strength (CS)</div>
                     <div class="result-value">{cs_pred:.2f}</div>
                     <div class="unit-label">MPa</div>
                 </div>
-                <div class="result-card" style="width:100%;max-width:unset;margin:0;">
+                <div class="result-card">
                     <div class="result-label">Tensile Strength (ST)</div>
                     <div class="result-value">{st_pred:.2f}</div>
                     <div class="unit-label">MPa</div>
                 </div>
-                <div class="result-card" style="width:100%;max-width:unset;margin:0;">
+                <div class="result-card">
                     <div class="result-label">Flexural Strength (FC)</div>
                     <div class="result-value">{fc_pred:.2f}</div>
                     <div class="unit-label">MPa</div>
                 </div>
             </div>
-            """,
+            ''',
             unsafe_allow_html=True
         )
-
-    
+        
