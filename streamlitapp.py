@@ -64,7 +64,7 @@ div[data-testid="stNumberInputLabel"], div[data-testid="stSelectboxLabel"] {
 }
 .unit-label {
     color: #b3b5ba;
-    font-size: 1.9rem;
+    font-size: 1.0rem;
     margin-top: 0.4rem;
     font-weight: 600;
     letter-spacing: 1px;
@@ -116,7 +116,7 @@ div[data-testid="stExpander"]:nth-of-type(3) > details > summary {
 }
 /* Section 4 */
 div[data-testid="stExpander"]:nth-of-type(4) > details > summary {
-    background: linear-gradient(90deg, #b0aaff 0%, #ede9fe 100%) !important;
+    background: #ffffff !important;
     color: #011c4f !important;
     border-bottom: 2.5px solid #6366f1;
     box-shadow: 0 2px 16px 0 #f5f1b8;
