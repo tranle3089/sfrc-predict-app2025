@@ -15,7 +15,7 @@ st.markdown("""
         h1 {
             font-size: 34px !important;
             font-weight: 800 !important;
-            color: #18181b;
+            color: #18181b!important;
             margin-top: 0.0rem !important;
             margin-bottom: 0.0rem !important;
         }
@@ -23,7 +23,7 @@ st.markdown("""
             font-size: 24px !important;
             font-weight: 800 !important;
             margin-top: 0 !important;
-            color: #18181b;
+            color: #18181b!important;
             margin-bottom: 0.5rem !important;
             border-left: 4px solid #18181b;
             padding-left: 2.1rem;
