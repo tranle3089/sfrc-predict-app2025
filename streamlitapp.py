@@ -6,13 +6,11 @@ import section_models
 import section_predict
 
 # ---------- Custom CSS for Expander Heading Colors ----------
-st.markdown("""
 <style>
 html, body, .block-container {
     background: #f5f7fa !important;
     color: #18181b !important;
 }
-/* ---- Heading mọi cấp ---- */
 h1, h2, h3, h4, h5, h6,
 .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6,
 .stMarkdown h1, .stMarkdown h2, .stMarkdown h3, .stMarkdown h4, .stMarkdown h5, .stMarkdown h6 {
@@ -22,7 +20,7 @@ h1, h2, h3, h4, h5, h6,
 label, .stNumberInput label, .stSelectbox label, 
 div[data-testid="stNumberInputLabel"], div[data-testid="stSelectboxLabel"] {
     color: #18181b !important;
-    font-size: 20px !important;
+    font-size: 1.06rem !important;     /* ~17px */
     font-weight: 600 !important;
 }
 /* ---- Result card ---- */
@@ -51,14 +49,14 @@ div[data-testid="stNumberInputLabel"], div[data-testid="stSelectboxLabel"] {
 }
 .result-label {
     color: #2563eb;
-    font-size: 1.05rem;
+    font-size: 1.09rem;
     font-weight: 800;
     margin-bottom: 1.0rem;
     letter-spacing: 0.5px;
 }
 .result-value {
     color: #18181b;
-    font-size: 2.1rem;
+    font-size: 2.05rem;
     font-weight: 900;
     margin-bottom: 0.2rem;
     letter-spacing: -2px;
@@ -72,7 +70,7 @@ div[data-testid="stNumberInputLabel"], div[data-testid="stSelectboxLabel"] {
 }
 /* ---- Button ---- */
 .stButton>button {
-    font-size: 22px !important;
+    font-size: 1.13rem !important; /* 18px */
     color: #fff !important;
     background: #021e5c !important;
     border: none !important;
@@ -86,49 +84,40 @@ div[data-testid="stNumberInputLabel"], div[data-testid="stSelectboxLabel"] {
 .stButton>button:hover {
     background: #1d4ed8 !important;
 }
-/* ---- Code block ---- */
-code, pre, .stCode, .stMarkdown code, .stMarkdown pre {
-    color: #18181b !important;
-    background: #f8fafc !important;
-    font-weight: 500 !important;
-    font-size: 1em !important;
-    border-radius: 6px !important;
-}
-
-/* -------- Expander section: chữ TO và box đậm, từng section màu khác nhau -------- */
+/* -------- Expander section: chữ vừa phải, màu box đậm hơn -------- */
 div[data-testid="stExpander"] summary span {
-    font-size: 2.5rem !important;        /* chữ cực to */
-    font-weight: 900 !important;
+    font-size: 1.45rem !important;      /* 23px */
+    font-weight: 800 !important;
     color: inherit !important;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
 }
-/* Section 1: xanh blue đậm */
+/* Section 1 */
 div[data-testid="stExpander"]:nth-of-type(1) > details > summary {
-    background: linear-gradient(90deg, #9ec5fe 0%, #e3eaff 100%) !important;
-    color: #133c82 !important;
+    background: linear-gradient(90deg, #74aaff 0%, #cce3fd 100%) !important;
+    color: #123370 !important;
     border-bottom: 2.5px solid #2563eb;
-    box-shadow: 0 2px 12px 0 #b4cffd99;
+    box-shadow: 0 2px 16px 0 #9ac3f899;
 }
-/* Section 2: xanh lá đậm */
+/* Section 2 */
 div[data-testid="stExpander"]:nth-of-type(2) > details > summary {
-    background: linear-gradient(90deg, #b7e4c7 0%, #e6fff8 100%) !important;
+    background: linear-gradient(90deg, #71d8af 0%, #d8f6e6 100%) !important;
     color: #127c4c !important;
     border-bottom: 2.5px solid #107143;
-    box-shadow: 0 2px 12px 0 #7ef6c499;
+    box-shadow: 0 2px 16px 0 #9dfcd899;
 }
-/* Section 3: cam đậm */
+/* Section 3 */
 div[data-testid="stExpander"]:nth-of-type(3) > details > summary {
-    background: linear-gradient(90deg, #ffd7ba 0%, #ffedd5 100%) !important;
-    color: #b45309 !important;
+    background: linear-gradient(90deg, #ffc773 0%, #f9edd3 100%) !important;
+    color: #b45e09 !important;
     border-bottom: 2.5px solid #fb923c;
-    box-shadow: 0 2px 12px 0 #ffbe76a0;
+    box-shadow: 0 2px 16px 0 #ffd37f99;
 }
-/* Section 4: tím xanh hiện đại */
+/* Section 4 */
 div[data-testid="stExpander"]:nth-of-type(4) > details > summary {
-    background: linear-gradient(90deg, #e0e7ff 0%, #ede9fe 100%) !important;
+    background: linear-gradient(90deg, #b0aaff 0%, #ede9fe 100%) !important;
     color: #4c1d95 !important;
     border-bottom: 2.5px solid #6366f1;
-    box-shadow: 0 2px 12px 0 #a5b4fc99;
+    box-shadow: 0 2px 16px 0 #c7b4fc99;
 }
 div[data-testid="stExpander"] {
     border-radius: 14px !important;
@@ -148,6 +137,7 @@ div[data-testid="stExpander"] {
 }
 </style>
 """, unsafe_allow_html=True)
+
 
 # ----------------- Main Content -----------------
 
