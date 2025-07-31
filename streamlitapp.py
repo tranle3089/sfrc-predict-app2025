@@ -73,12 +73,12 @@ st.markdown("""
     .stButton>button {
         font-size: 1.13rem !important; 
         color: #fff !important;
-        background: #021e5c !important;
+        background: #0e54cc !important;
         border: none !important;
         border-radius: 6px !important;
         padding: 0.5rem 1.0rem !important;
         font-weight: 800 !important;
-        transition: background 0.3s;
+        transition: background 0.2s;
         margin-top: 0.2rem !important;
         margin-bottom: 0.2rem !important;
     }
@@ -95,28 +95,28 @@ st.markdown("""
     /* Section 1 */
     div[data-testid="stExpander"]:nth-of-type(1) > details > summary {
         background: linear-gradient(90deg, #74aaff 0%, #cce3fd 100%) !important;
-        color: #123370 !important;
+        color: #0258f5 !important;
         border-bottom: 2.5px solid #2563eb;
         box-shadow: 0 2px 16px 0 #9ac3f899;
     }
     /* Section 2 */
     div[data-testid="stExpander"]:nth-of-type(2) > details > summary {
         background: linear-gradient(90deg, #71d8af 0%, #d8f6e6 100%) !important;
-        color: #127c4c !important;
+        color: #0258f5 !important;
         border-bottom: 2.5px solid #107143;
         box-shadow: 0 2px 16px 0 #9dfcd899;
     }
     /* Section 3 */
     div[data-testid="stExpander"]:nth-of-type(3) > details > summary {
-        background: linear-gradient(90deg, #ffc773 0%, #f9edd3 100%) !important;
-        color: #b45e09 !important;
+        background: linear-gradient(90deg, #f7e997 0%, #f7e997 100%) !important;
+        color: #0258f5 !important;
         border-bottom: 2.5px solid #fb923c;
         box-shadow: 0 2px 16px 0 #ffd37f99;
     }
     /* Section 4 */
     div[data-testid="stExpander"]:nth-of-type(4) > details > summary {
         background: linear-gradient(90deg, #b0aaff 0%, #ede9fe 100%) !important;
-        color: #4c1d95 !important;
+        color: #0258f5 !important;
         border-bottom: 2.5px solid #6366f1;
         box-shadow: 0 2px 16px 0 #c7b4fc99;
     }
