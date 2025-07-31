@@ -64,7 +64,7 @@ div[data-testid="stNumberInputLabel"], div[data-testid="stSelectboxLabel"] {
 }
 .unit-label {
     color: #b3b5ba;
-    font-size: 1.0rem;
+    font-size: 1.9rem;
     margin-top: 0.4rem;
     font-weight: 600;
     letter-spacing: 1px;
