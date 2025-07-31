@@ -191,7 +191,7 @@ st.markdown("""
     <div style="margin-top: 0.6em; font-size:1.05rem; color:#18181b;">
         <b>Le Thi Huyen Tran</b> <br>
         PhD Student <br>
-        Department of Architectural Engineering, Sejong University, 209 Neungdong-ro, Gwangjin-gu, Seoul 05006, Republic of Korea <br>
+        Department of Architectural Engineering, Sejong University, Seoul, Republic of Korea <br>
         Email:huyenle3089@gmail.com
     </div>
 </div>
