@@ -22,4 +22,4 @@ def show():
         "</div>",
         unsafe_allow_html=True
     )
-    st.image("picture2.png", use_container_width=True)
+    st.image("Picture2.png", use_container_width=True)
