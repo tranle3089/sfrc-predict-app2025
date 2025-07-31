@@ -8,7 +8,6 @@ import section_predict
 # ---------- Custom CSS for Expander Heading Colors ----------
 st.markdown("""
 <style>
-/* ---- App Layout & Nền chung ---- */
 html, body, .block-container {
     background: #f5f7fa !important;
     color: #18181b !important;
@@ -19,14 +18,14 @@ h1, h2, h3, h4, h5, h6,
 .stMarkdown h1, .stMarkdown h2, .stMarkdown h3, .stMarkdown h4, .stMarkdown h5, .stMarkdown h6 {
     color: #18181b !important;
 }
-/* ---- Label cho input, select, number... ---- */
+/* ---- Label ---- */
 label, .stNumberInput label, .stSelectbox label, 
 div[data-testid="stNumberInputLabel"], div[data-testid="stSelectboxLabel"] {
     color: #18181b !important;
     font-size: 20px !important;
     font-weight: 600 !important;
 }
-/* ---- Result card đẹp ---- */
+/* ---- Result card ---- */
 .result-card-row {
     display: flex;
     gap: 1.5rem;
@@ -95,33 +94,48 @@ code, pre, .stCode, .stMarkdown code, .stMarkdown pre {
     font-size: 1em !important;
     border-radius: 6px !important;
 }
-/* ---- Expander heading cực to, nhiều màu, luôn rõ ---- */
+
+/* -------- Expander section: chữ TO và box đậm, từng section màu khác nhau -------- */
 div[data-testid="stExpander"] summary span {
-    font-size: 2.15rem !important;    
+    font-size: 2.5rem !important;        /* chữ cực to */
     font-weight: 900 !important;
     color: inherit !important;
+    letter-spacing: 0.5px;
 }
+/* Section 1: xanh blue đậm */
 div[data-testid="stExpander"]:nth-of-type(1) > details > summary {
-    background: linear-gradient(90deg, #e3eaff 0%, #f6f8fe 100%) !important;
-    color: #2563eb !important;
-    border-bottom: 1.5px solid #e3eaff;
+    background: linear-gradient(90deg, #9ec5fe 0%, #e3eaff 100%) !important;
+    color: #133c82 !important;
+    border-bottom: 2.5px solid #2563eb;
+    box-shadow: 0 2px 12px 0 #b4cffd99;
 }
+/* Section 2: xanh lá đậm */
 div[data-testid="stExpander"]:nth-of-type(2) > details > summary {
-    background: linear-gradient(90deg, #e9fae9 0%, #f7fef6 100%) !important;
-    color: #107143 !important;
-    border-bottom: 1.5px solid #e9fae9;
+    background: linear-gradient(90deg, #b7e4c7 0%, #e6fff8 100%) !important;
+    color: #127c4c !important;
+    border-bottom: 2.5px solid #107143;
+    box-shadow: 0 2px 12px 0 #7ef6c499;
 }
+/* Section 3: cam đậm */
 div[data-testid="stExpander"]:nth-of-type(3) > details > summary {
-    background: linear-gradient(90deg, #fff2e6 0%, #fdf7f2 100%) !important;
-    color: #c26622 !important;
-    border-bottom: 1.5px solid #fff2e6;
+    background: linear-gradient(90deg, #ffd7ba 0%, #ffedd5 100%) !important;
+    color: #b45309 !important;
+    border-bottom: 2.5px solid #fb923c;
+    box-shadow: 0 2px 12px 0 #ffbe76a0;
+}
+/* Section 4: tím xanh hiện đại */
+div[data-testid="stExpander"]:nth-of-type(4) > details > summary {
+    background: linear-gradient(90deg, #e0e7ff 0%, #ede9fe 100%) !important;
+    color: #4c1d95 !important;
+    border-bottom: 2.5px solid #6366f1;
+    box-shadow: 0 2px 12px 0 #a5b4fc99;
 }
 div[data-testid="stExpander"] {
     border-radius: 14px !important;
     overflow: hidden !important;
-    margin-bottom: 1.1rem;
-    box-shadow: 0 2px 8px 0 rgba(31,38,135,0.06);
-    border: 1.2px solid #e5e7eb !important;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 2px 10px 0 rgba(31,38,135,0.06);
+    border: 2px solid #e5e7eb !important;
 }
 @media (max-width: 900px) {
     .result-card-row {
@@ -134,7 +148,6 @@ div[data-testid="stExpander"] {
 }
 </style>
 """, unsafe_allow_html=True)
-
 
 # ----------------- Main Content -----------------
 
