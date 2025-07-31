@@ -1,7 +1,61 @@
 import streamlit as st
 import numpy as np
 import time
-
+st.markdown("""
+    <style>
+        .block-container {
+            padding-top: 1.2rem !important;
+            padding-bottom: 0.1rem !important;
+            padding-left: 1.5rem !important;
+            padding-right: 1.5rem !important;
+        }
+        html, body, [class*="css"]  {
+            font-size: 20px !important;
+        }
+        h1 {
+            font-size: 34px !important;
+            font-weight: 800 !important;
+            margin-top: 0.0rem !important;
+            margin-bottom: 0.0rem !important;
+        }
+        h2, h3, h4 {
+            font-size: 24px !important;
+            font-weight: 800 !important;
+            margin-top: 0 !important;
+            margin-bottom: 0.5rem !important;
+            border-left: 4px solid #2563eb;
+            padding-left: 2.1rem;
+            background: linear-gradient(90deg, #eff6ff 50%, transparent 80%);
+        }
+        label, .stNumberInput label, .stSelectbox label {
+            font-size: 20px !important;
+            font-weight: 500;
+            margin-bottom: 0.1rem !important;
+        }
+        .stNumberInput, .stSelectbox {
+            margin-bottom: 0.1rem !important;
+        }
+        .stButton>button {
+            font-size: 22px !important;
+            color: #fff !important;
+            background: #021e5c !important;
+            border: none !important;
+            border-radius: 6px !important;
+            padding: 0.5rem 1.0rem !important;
+            font-weight: 800 !important;
+            transition: background 0.3s;
+            margin-top: 0.2rem !important;
+            margin-bottom: 0.2rem !important;
+        }
+        .stButton>button:hover {
+            background: #1d4ed8 !important;
+        }
+        .stMarkdown p {
+            font-size: 20px !important;
+            margin-bottom: 0.1rem !important;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 spinner_html = """
 <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:130px">
   <div class="lds-spinner">
