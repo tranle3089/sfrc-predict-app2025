@@ -1,23 +1,31 @@
 import streamlit as st
 
 def show():
+    # Tiêu đề
     st.markdown("""
     <div style='text-align:center; margin-bottom:0em;'>
-        <span style='font-size:1.30rem; font-weight:700; color:#2563eb;'>Welcome to the <u>SFRC Strength Prediction App</u></span>
-    </div>
-    """, unsafe_allow_html=True)
-    st.markdown("""
-    <div style='margin-top:0.5em; font-size:1.09rem; text-align:justify'>
-    The <b>Figure 1</b> presents the research framework for predicting the mechanical properties of SFRC, which is divided into three main stages: <b>data collection</b>, <b>data processing</b>, and <b>prediction models development</b>. The following sections provide a detailed description of the respective stages.
+        <span style='font-size:1.30rem; font-weight:700; color:#18181b;'>Welcome to the <u>SFRC Strength Prediction App</u></span>
     </div>
     """, unsafe_allow_html=True)
 
+    # Đoạn mô tả framework
+    st.markdown("""
+    <div style='margin-top:0.5em; font-size:1.09rem; text-align:justify; color:#18181b;'>
+    <b>Figure 1</b> presents the research framework for predicting the mechanical properties of SFRC, which is divided into three main stages: <b>data collection</b>, <b>data processing</b>, and <b>prediction models development</b>. The following sections provide a detailed description of the respective stages.
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Hình workflow
     st.image("Picture1.png",
              caption="Figure 1. Workflow of the proposed hybrid ML framework for SFRC prediction.",
              use_container_width=True)
+
+    # Table of Contents
     st.markdown("""
-    ### Table of Contents
-    <div style="font-size:1.07rem; line-height:1.7;">
+    <div style="margin-top:1.5em;">
+    <span style="font-size:1.14rem; font-weight:700; color:#18181b;">Table of Contents</span>
+    </div>
+    <div style="font-size:1.07rem; line-height:1.7; color:#18181b;">
     <ol style="list-style-type: decimal; margin-left: 0.7em;">
       <li><b>Introduction</b></li>
       <li><b>Materials and Methods</b>
@@ -28,10 +36,7 @@ def show():
             <ul style="list-style-type:none;">
               <li>2.3.1 Regression Algorithms</li>
               <li>2.3.2 Tree-Based Algorithms</li>
-              <li>2.3.3 Neural Network Algorithms
-                <ul style="list-style-type: disc; margin-left: 0.9em;">
-                </ul>
-              </li>
+              <li>2.3.3 Neural Network Algorithms</li>
             </ul>
           </li>
           <li>2.4 Optimization Using TPE Method
@@ -52,10 +57,7 @@ def show():
         <ul style="list-style-type:none;">
           <li>3.1 Optimized Hyperparameters</li>
           <li>3.2 Performance of the Hybrid Machine Learning Model</li>
-          <li>3.3 SHAP (Shapley Additive Explanations) Analysis
-            <ul style="list-style-type: disc; margin-left: 0.9em;">
-            </ul>
-          </li>
+          <li>3.3 SHAP (Shapley Additive Explanations) Analysis</li>
           <li>3.4 Partial Dependence Plot (PDP) Analysis</li>
         </ul>
       </li>
@@ -63,5 +65,3 @@ def show():
     </ol>
     </div>
     """, unsafe_allow_html=True)
-
-
