@@ -177,11 +177,11 @@ with st.expander("4. Prediction Tool"):
 st.markdown("---")
 st.markdown("""
 <div style="
-    background: #e8f3ff;
+    background: #dbeafe;
     border-left: 5px solid #2563eb;
     border-radius: 8px;
-    padding: 0.9rem 1.2rem;
-    font-size: 1.07rem;
+    padding: 0.95rem 1.3rem;
+    font-size: 1.09rem;
     color: #18181b;
     margin-top: 1.2em;
     margin-bottom: 0.5em;
