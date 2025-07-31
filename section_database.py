@@ -5,7 +5,7 @@ def show():
 
     st.markdown(
         """
-        <div style='text-align:justify; font-size:1.07rem; color:#25344b; line-height:1.5;'>
+        <div style='text-align:justify; font-size:1.07rem; color:#18181b; line-height:1.5;'>
         The database presented in Table 1 provides a comprehensive overview of the experimental datasets
         employed in this study. It encompasses key mixture proportions, steel fiber characteristics, and corresponding mechanical
         properties of SFRC specimens, which serve as the foundation for the machine learning model development.
