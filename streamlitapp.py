@@ -8,6 +8,9 @@ import section_predict
 # ---------- Custom CSS for Expander Heading Colors ----------
 st.markdown("""
 <style>
+html, body, [class*="css"] {
+    background: #f5f7fa !important;
+}
 .block-container {
     background: #f5f7fa !important;
     box-shadow: 0 0 20px 0 rgba(45, 76, 151, 0.05), 0 1.5px 5px 0 rgba(160,180,215,0.03);
@@ -17,6 +20,7 @@ st.markdown("""
     padding-left: 2.2rem !important;
     padding-right: 2.2rem !important;
 }
+
 /* -------- Kết quả prediction card đẹp -------- */
 .result-card-row {
     display: flex;
@@ -33,7 +37,7 @@ st.markdown("""
     min-width: 150px;
     max-width: 180px;
     text-align: center;
-    border: 1.5px solid #3b82f6;
+    border: 2px solid #2563eb;
     transition: box-shadow 0.2s, transform 0.2s;
 }
 .result-card:hover {
@@ -42,14 +46,14 @@ st.markdown("""
 }
 .result-label {
     color: #2563eb;
-    font-size: 1.0rem;
+    font-size: 1.05rem;
     font-weight: 800;
     margin-bottom: 1.0rem;
     letter-spacing: 0.5px;
 }
 .result-value {
     color: #18181b;
-    font-size: 2.0rem;
+    font-size: 2.1rem;
     font-weight: 900;
     margin-bottom: 0.2rem;
     letter-spacing: -2px;
@@ -73,28 +77,35 @@ st.markdown("""
 
 /* -------- Heading expander cực to & nhiều màu -------- */
 div[data-testid="stExpander"] summary span {
-    font-size: 2.35rem !important;    /* cực to, ~37px */
+    font-size: 2.15rem !important;    
     font-weight: 900 !important;
     color: inherit !important;
 }
 div[data-testid="stExpander"]:nth-of-type(1) > details > summary {
     background: linear-gradient(90deg, #e3eaff 0%, #f6f8fe 100%) !important;
     color: #2563eb !important;
+    border-bottom: 1.5px solid #e3eaff;
 }
 div[data-testid="stExpander"]:nth-of-type(2) > details > summary {
     background: linear-gradient(90deg, #e9fae9 0%, #f7fef6 100%) !important;
     color: #107143 !important;
+    border-bottom: 1.5px solid #e9fae9;
 }
 div[data-testid="stExpander"]:nth-of-type(3) > details > summary {
     background: linear-gradient(90deg, #fff2e6 0%, #fdf7f2 100%) !important;
     color: #c26622 !important;
+    border-bottom: 1.5px solid #fff2e6;
 }
 div[data-testid="stExpander"] {
     border-radius: 14px !important;
     overflow: hidden !important;
+    margin-bottom: 1.1rem;
+    box-shadow: 0 2px 8px 0 rgba(31,38,135,0.06);
+    border: 1.2px solid #e5e7eb !important;
 }
 </style>
 """, unsafe_allow_html=True)
+
 
 
 # ----------------- Main Content -----------------
