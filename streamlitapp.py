@@ -186,6 +186,7 @@ st.markdown("""
     margin-top: 1.2em;
     margin-bottom: 0.5em;
     font-weight: 600;">
-    📧 Contact: huyenle3089@gmail.com
+    📧 Contact: <a href="mailto:huyenle3089@gmail.com" style="color:#18181b; text-decoration:underline; font-weight:600;">huyenle3089@gmail.com</a>
 </div>
 """, unsafe_allow_html=True)
+
