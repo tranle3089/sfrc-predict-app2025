@@ -89,7 +89,7 @@ div[data-testid="stNumberInputLabel"], div[data-testid="stSelectboxLabel"] {
 div[data-testid="stExpander"] summary span {
     font-size: 1.45rem !important;     
     font-weight: 800 !important;
-    color: inherit !important;
+    color: #fff !important;
     letter-spacing: 0.4px;
 }
 /* Section 1 */
@@ -121,9 +121,9 @@ div[data-testid="stExpander"]:nth-of-type(4) > details > summary {
     border-bottom: 2.5px solid #6366f1;
     box-shadow: 0 2px 16px 0 #f5f1b8;
 }
-div[data-testid="stExpander"] > details > summary {
-    background: #ffffff !important;
-    color: #18181b !important;
+div[data-testid="stExpander"] > details {
+    background: #fff !important;
+    border-radius: 0 0 16px 16px !important;
 }
 @media (max-width: 900px) {
     .result-card-row {
