@@ -23,7 +23,7 @@ st.markdown("""
             font-weight: 800 !important;
             margin-top: 0 !important;
             margin-bottom: 0.5rem !important;
-            border-left: 4px solid #2563eb;
+            border-left: 4px solid #18181b;
             padding-left: 2.1rem;
             background: linear-gradient(90deg, #eff6ff 50%, transparent 80%);
         }
