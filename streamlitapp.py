@@ -9,10 +9,6 @@ import section_predict
 st.markdown("""
 <style>
 .block-container {
-    padding-top: 2.2rem !important;
-    padding-bottom: 1.0rem !important;
-    padding-left: 2.2rem !important;
-    padding-right: 2.2rem !important;
     background: #f5f7fa;
 }
 /* -------- Kết quả prediction card đẹp -------- */
