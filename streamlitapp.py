@@ -98,6 +98,7 @@ div[data-testid="stExpander"]:nth-of-type(1) > details > summary {
     color: #011c4f !important;
     border-bottom: 2.5px solid #2563eb;
     box-shadow: 0 2px 16px 0 #f5f1b8;
+    font-size: 1.35rem !important;
 }
 /* Section 2 */
 div[data-testid="stExpander"]:nth-of-type(2) > details > summary {
