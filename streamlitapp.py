@@ -8,20 +8,25 @@ import section_predict
 # ---------- Custom CSS for Expander Heading Colors ----------
 st.markdown("""
 <style>
-html, body, [class*="css"] {
+/* ---- App Layout & Nền chung ---- */
+html, body, .block-container {
     background: #f5f7fa !important;
+    color: #18181b !important;
 }
-.block-container {
-    background: #f5f7fa !important;
-    box-shadow: 0 0 20px 0 rgba(45, 76, 151, 0.05), 0 1.5px 5px 0 rgba(160,180,215,0.03);
-    border-radius: 18px !important;
-    padding-top: 2.2rem !important;
-    padding-bottom: 1.2rem !important;
-    padding-left: 2.2rem !important;
-    padding-right: 2.2rem !important;
+/* ---- Heading mọi cấp ---- */
+h1, h2, h3, h4, h5, h6,
+.stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6,
+.stMarkdown h1, .stMarkdown h2, .stMarkdown h3, .stMarkdown h4, .stMarkdown h5, .stMarkdown h6 {
+    color: #18181b !important;
 }
-
-/* -------- Kết quả prediction card đẹp -------- */
+/* ---- Label cho input, select, number... ---- */
+label, .stNumberInput label, .stSelectbox label, 
+div[data-testid="stNumberInputLabel"], div[data-testid="stSelectboxLabel"] {
+    color: #18181b !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+}
+/* ---- Result card đẹp ---- */
 .result-card-row {
     display: flex;
     gap: 1.5rem;
@@ -39,6 +44,7 @@ html, body, [class*="css"] {
     text-align: center;
     border: 2px solid #2563eb;
     transition: box-shadow 0.2s, transform 0.2s;
+    color: #18181b !important;
 }
 .result-card:hover {
     box-shadow: 0 6px 30px 0 rgba(70,109,236,0.13);
@@ -65,17 +71,31 @@ html, body, [class*="css"] {
     font-weight: 600;
     letter-spacing: 1px;
 }
-@media (max-width: 900px) {
-    .result-card-row {
-        flex-direction: column;
-        gap: 1.0rem;
-    }
-    .result-card {
-        min-width: unset;
-    }
+/* ---- Button ---- */
+.stButton>button {
+    font-size: 22px !important;
+    color: #fff !important;
+    background: #021e5c !important;
+    border: none !important;
+    border-radius: 6px !important;
+    padding: 0.5rem 1.0rem !important;
+    font-weight: 800 !important;
+    transition: background 0.3s;
+    margin-top: 0.2rem !important;
+    margin-bottom: 0.2rem !important;
 }
-
-/* -------- Heading expander cực to & nhiều màu -------- */
+.stButton>button:hover {
+    background: #1d4ed8 !important;
+}
+/* ---- Code block ---- */
+code, pre, .stCode, .stMarkdown code, .stMarkdown pre {
+    color: #18181b !important;
+    background: #f8fafc !important;
+    font-weight: 500 !important;
+    font-size: 1em !important;
+    border-radius: 6px !important;
+}
+/* ---- Expander heading cực to, nhiều màu, luôn rõ ---- */
 div[data-testid="stExpander"] summary span {
     font-size: 2.15rem !important;    
     font-weight: 900 !important;
@@ -103,8 +123,18 @@ div[data-testid="stExpander"] {
     box-shadow: 0 2px 8px 0 rgba(31,38,135,0.06);
     border: 1.2px solid #e5e7eb !important;
 }
+@media (max-width: 900px) {
+    .result-card-row {
+        flex-direction: column;
+        gap: 1.0rem;
+    }
+    .result-card {
+        min-width: unset;
+    }
+}
 </style>
 """, unsafe_allow_html=True)
+
 
 # ----------------- Main Content -----------------
 
