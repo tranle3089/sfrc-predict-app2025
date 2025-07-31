@@ -1,8 +1,7 @@
 import streamlit as st
 
 def show():
-    st.markdown("## 4. Database")
-
+   
     st.markdown(
         """
         <div style='text-align:justify; font-size:1.07rem; color:#18181b; line-height:1.5;'>
