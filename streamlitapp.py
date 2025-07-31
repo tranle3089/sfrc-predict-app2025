@@ -95,28 +95,28 @@ st.markdown("""
     /* Section 1 */
     div[data-testid="stExpander"]:nth-of-type(1) > details > summary {
         background: linear-gradient(90deg, #74aaff 0%, #cce3fd 100%) !important;
-        color: #0258f5 !important;
+        color: #011c4f !important;
         border-bottom: 2.5px solid #2563eb;
         box-shadow: 0 2px 16px 0 #f5f1b8;
     }
     /* Section 2 */
     div[data-testid="stExpander"]:nth-of-type(2) > details > summary {
         background: linear-gradient(90deg, #71d8af 0%, #d8f6e6 100%) !important;
-        color: #0258f5 !important;
+        color: #011c4f !important;
         border-bottom: 2.5px solid #107143;
         box-shadow: 0 2px 16px 0 #f5f1b8;
     }
     /* Section 3 */
     div[data-testid="stExpander"]:nth-of-type(3) > details > summary {
         background: linear-gradient(90deg, #f7e997 0%, #f7e997 100%) !important;
-        color: #0258f5 !important;
+        color: #011c4f !important;
         border-bottom: 2.5px solid #fb923c;
         box-shadow: 0 2px 16px 0 #f5f1b8;
     }
     /* Section 4 */
     div[data-testid="stExpander"]:nth-of-type(4) > details > summary {
         background: linear-gradient(90deg, #b0aaff 0%, #ede9fe 100%) !important;
-        color: #0258f5 !important;
+        color: #011c4f !important;
         border-bottom: 2.5px solid #6366f1;
         box-shadow: 0 2px 16px 0 #f5f1b8;
     }
