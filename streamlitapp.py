@@ -122,10 +122,8 @@ div[data-testid="stExpander"]:nth-of-type(4) > details > summary {
     box-shadow: 0 2px 16px 0 #f5f1b8;
 }
 div[data-testid="stExpander"] > details > summary {
-    background: #fff !important;
+    background: #ffffff !important;
     color: #18181b !important;
-    border-bottom: 2px solid #e5e7eb;
-    box-shadow: 0 2px 8px 0 #f2f2f2;
 }
 @media (max-width: 900px) {
     .result-card-row {
