@@ -1,7 +1,16 @@
 import streamlit as st
 import numpy as np
 import time
-
+st.markdown("""
+<style>
+body, .block-container, div[data-testid="stExpander"] > details > div,
+.result-card, .result-label, .result-value, .unit-label,
+.stMarkdown, .stMarkdown p, .stMarkdown span, .stMarkdown div,
+label, .stNumberInput label, .stSelectbox label {
+    color: #18181b !important;
+}
+</style>
+""", unsafe_allow_html=True)
 spinner_html = """
 <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:130px">
   <div class="lds-spinner">
