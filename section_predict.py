@@ -2,8 +2,6 @@ import streamlit as st
 import numpy as np
 import time
 
-</style>
-""", unsafe_allow_html=True)
 spinner_html = """
 <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:130px">
   <div class="lds-spinner">
