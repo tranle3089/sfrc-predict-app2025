@@ -8,8 +8,10 @@ st.markdown("""
             padding-bottom: 0.1rem !important;
             padding-left: 1.5rem !important;
             padding-right: 1.5rem !important;
+            color: #18181b !important;
+            background: #fff !important;
         }
-        html, body, [class*="css"]  {
+        html, body {
             font-size: 20px !important;
             color: #18181b !important;
             background: #fff !important;
@@ -60,9 +62,8 @@ st.markdown("""
             margin-bottom: 0.1rem !important;
             color: #18181b !important;
         }
-        /* Đảm bảo chữ trong card, result, code block đều tối */
-        .result-card, .result-label, .result-value, .unit-label,
-        .result-card-row, .stMarkdown, .stMarkdown p, .stMarkdown span, .stMarkdown div {
+        /* Chỉ style phần kết quả, không lan sang toàn bộ app */
+        .result-card, .result-label, .result-value, .unit-label {
             color: #18181b !important;
         }
         /* Style cho code block */
@@ -116,7 +117,7 @@ def show(model_CS, model_ST, model_FC):
         fc_pred = model_FC.predict(input_data)[0]
 
         st.markdown("""
-        <div style="border-radius: 13px; padding: 1.0rem 1.0rem; margin-bottom:1rem; color:#20723a; font-weight: 700; font-size: 1.1rem; border: 1.0px solid #74c99e;">
+        <div style="background-color:#e6f9eb; border-radius: 13px; padding: 1.0rem 1.0rem; margin-bottom:1rem; color:#20723a; font-weight: 700; font-size: 1.1rem; border: 1.0px solid #74c99e;">
             ✅ Results
         </div>
         """, unsafe_allow_html=True)
@@ -143,3 +144,5 @@ def show(model_CS, model_ST, model_FC):
             """,
             unsafe_allow_html=True
         )
+
+    
