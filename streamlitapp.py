@@ -175,4 +175,17 @@ with st.expander("4. Prediction Tool"):
     section_predict.show(model_CS, model_ST, model_FC)
 
 st.markdown("---")
-st.info("Contact: huyenle3089@gmail.com")
+st.markdown("""
+<div style="
+    background: #e8f3ff;
+    border-left: 5px solid #2563eb;
+    border-radius: 8px;
+    padding: 0.9rem 1.2rem;
+    font-size: 1.07rem;
+    color: #18181b;
+    margin-top: 1.2em;
+    margin-bottom: 0.5em;
+    font-weight: 600;">
+    📧 Contact: huyenle3089@gmail.com
+</div>
+""", unsafe_allow_html=True)
