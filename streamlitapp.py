@@ -188,10 +188,10 @@ st.markdown("""
     margin-top: 1.2em;
     margin-bottom: 0.5em;
     font-weight: 600;">
-    📧 Contact: <a href="mailto:huyenle3089@gmail.com" style="color:#18181b; text-decoration:underline; font-weight:600;">huyenle3089@gmail.com</a>
     <div style="margin-top: 0.6em; font-size:1.05rem; color:#18181b;">
         <b>Le Thi Huyen Tran</b> <br>
-        PhD Student, Sejong University, Korea
+        PhD Student, Sejong University, Korea <br>
+        Emailto:huyenle3089@gmail.com
     </div>
 </div>
 """, unsafe_allow_html=True)
