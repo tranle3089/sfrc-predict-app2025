@@ -89,7 +89,7 @@ div[data-testid="stNumberInputLabel"], div[data-testid="stSelectboxLabel"] {
 div[data-testid="stExpander"] summary span {
     font-size: 1.45rem !important;     
     font-weight: 800 !important;
-    color: #fff !important;
+    color: #18181b !important;
     letter-spacing: 0.4px;
 }
 /* Section 1 */
