@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6,
 label, .stNumberInput label, .stSelectbox label, 
 div[data-testid="stNumberInputLabel"], div[data-testid="stSelectboxLabel"] {
     color: #18181b !important;
-    font-size: 1.06rem !important;     /* ~17px */
+    font-size: 1.06rem !important;    
     font-weight: 600 !important;
 }
 /* ---- Result card ---- */
@@ -70,7 +70,7 @@ div[data-testid="stNumberInputLabel"], div[data-testid="stSelectboxLabel"] {
 }
 /* ---- Button ---- */
 .stButton>button {
-    font-size: 1.13rem !important; /* 18px */
+    font-size: 1.13rem !important; 
     color: #fff !important;
     background: #021e5c !important;
     border: none !important;
@@ -86,7 +86,7 @@ div[data-testid="stNumberInputLabel"], div[data-testid="stSelectboxLabel"] {
 }
 /* -------- Expander section: chữ vừa phải, màu box đậm hơn -------- */
 div[data-testid="stExpander"] summary span {
-    font-size: 1.45rem !important;      /* 23px */
+    font-size: 1.45rem !important;     
     font-weight: 800 !important;
     color: inherit !important;
     letter-spacing: 0.4px;
