@@ -121,12 +121,11 @@ div[data-testid="stExpander"]:nth-of-type(4) > details > summary {
     border-bottom: 2.5px solid #6366f1;
     box-shadow: 0 2px 16px 0 #f5f1b8;
 }
-div[data-testid="stExpander"] {
-    border-radius: 14px !important;
-    overflow: hidden !important;
-    margin-bottom: 1.2rem;
-    box-shadow: 0 2px 10px 0 rgba(31,38,135,0.06);
-    border: 2px solid #e5e7eb !important;
+div[data-testid="stExpander"] > details > summary {
+    background: #fff !important;
+    color: #18181b !important;
+    border-bottom: 2px solid #e5e7eb;
+    box-shadow: 0 2px 8px 0 #f2f2f2;
 }
 @media (max-width: 900px) {
     .result-card-row {
