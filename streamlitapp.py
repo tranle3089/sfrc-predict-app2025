@@ -110,10 +110,24 @@ div[data-testid="stExpander"] {
 
 # ----------------- Main Content -----------------
 
-st.title("SFRC Strength Prediction App")
-st.write("""
-#### *A novel hybrid machine learning framework for predicting the mechanical properties of steel fiber-reinforced concrete*
-""")
+st.markdown(
+    """
+    <div style="font-size:2.2rem; font-weight:800; color:#18181b; margin-bottom:0.25em; letter-spacing:-1px;">
+        SFRC Strength Prediction App
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    """
+    <div style="font-size:1.15rem; color:#18181b; margin-bottom:1.3em;">
+        <em>A novel hybrid machine learning framework for predicting the mechanical properties of steel fiber-reinforced concrete</em>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 # Load model chỉ 1 lần ở đây:
 model_CS = joblib.load("CatBoost_optimized_CS.pkl")
 model_ST = joblib.load("CatBoost_optimized_ST.pkl")
