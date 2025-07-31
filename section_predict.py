@@ -11,7 +11,7 @@ st.markdown("""
         }
         .result-card, .result-label, .result-value, .unit-label,
         .result-card-row, .stMarkdown, .stMarkdown p, .stMarkdown span, .stMarkdown div {
-            color: ##101112 !important;
+            color: #101112 !important;
         }
         html, body, [class*="css"]  {
             font-size: 20px !important;
