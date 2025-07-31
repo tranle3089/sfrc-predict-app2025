@@ -17,26 +17,23 @@ st.markdown("""
             font-size: 20px !important;
         }
         h1 {
-            font-size: 24px !important;
+            font-size: 34px !important;
             font-weight: 800 !important;
-            color: #18181b!important;
             margin-top: 0.0rem !important;
             margin-bottom: 0.0rem !important;
         }
         h2, h3, h4 {
-            font-size: 20px !important;
+            font-size: 24px !important;
             font-weight: 800 !important;
             margin-top: 0 !important;
-            color: #18181b!important;
             margin-bottom: 0.5rem !important;
-            border-left: 4px solid #18181b;
+            border-left: 4px solid #2563eb;
             padding-left: 2.1rem;
             background: linear-gradient(90deg, #eff6ff 50%, transparent 80%);
         }
         label, .stNumberInput label, .stSelectbox label {
             font-size: 20px !important;
             font-weight: 500;
-            color: #18181b!important;
             margin-bottom: 0.1rem !important;
         }
         .stNumberInput, .stSelectbox {
