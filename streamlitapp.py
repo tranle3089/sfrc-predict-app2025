@@ -181,8 +181,8 @@ with st.expander("4. Prediction Tool"):
 st.markdown("---")
 st.markdown("""
 <div style="
-    background: #dbeafe;
-    border-left: 5px solid #2563eb;
+    background: #d8dee8;
+    border-left: 5px solid #d8dee8;
     border-radius: 8px;
     padding: 0.95rem 1.3rem;
     font-size: 1.09rem;
