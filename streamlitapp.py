@@ -180,7 +180,7 @@ st.markdown("---")
 st.markdown("""
 <div style="
     background: #d8dee8;
-    border-left: 5px solid #d8dee8;
+    border-left: 5px solid #2563eb;
     border-radius: 8px;
     padding: 0.95rem 1.3rem;
     font-size: 1.09rem;
@@ -189,6 +189,9 @@ st.markdown("""
     margin-bottom: 0.5em;
     font-weight: 600;">
     📧 Contact: <a href="mailto:huyenle3089@gmail.com" style="color:#18181b; text-decoration:underline; font-weight:600;">huyenle3089@gmail.com</a>
+    <div style="margin-top: 0.6em; font-size:1.05rem; color:#18181b;">
+        <b>Le Thi Huyen Tran</b> <br>
+        PhD Student, Sejong University, Korea
+    </div>
 </div>
 """, unsafe_allow_html=True)
-
