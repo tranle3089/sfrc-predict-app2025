@@ -1,6 +1,6 @@
 import streamlit as st
 import numpy as np
-import time
+
 st.markdown("""
     <style>
         .block-container {
@@ -9,34 +9,32 @@ st.markdown("""
             padding-left: 1.5rem !important;
             padding-right: 1.5rem !important;
         }
-        .result-card, .result-label, .result-value, .unit-label,
-        .result-card-row, .stMarkdown, .stMarkdown p, .stMarkdown span, .stMarkdown div {
-            color: #101112 !important;
-        }
         html, body, [class*="css"]  {
             font-size: 20px !important;
+            color: #18181b !important;
+            background: #fff !important;
         }
         h1 {
-            font-size: 24px !important;
+            font-size: 34px !important;
             font-weight: 800 !important;
             margin-top: 0.0rem !important;
-            color: #18181b!important;
             margin-bottom: 0.0rem !important;
+            color: #18181b !important;
         }
         h2, h3, h4 {
-            font-size: 20px !important;
+            font-size: 24px !important;
             font-weight: 800 !important;
             margin-top: 0 !important;
             margin-bottom: 0.5rem !important;
             border-left: 4px solid #2563eb;
             padding-left: 2.1rem;
-            color: #18181b!important;
+            color: #18181b !important;
             background: linear-gradient(90deg, #eff6ff 50%, transparent 80%);
         }
         label, .stNumberInput label, .stSelectbox label {
             font-size: 20px !important;
             font-weight: 500;
-            color: #18181b!important;
+            color: #18181b !important;
             margin-bottom: 0.1rem !important;
         }
         .stNumberInput, .stSelectbox {
@@ -60,9 +58,24 @@ st.markdown("""
         .stMarkdown p {
             font-size: 20px !important;
             margin-bottom: 0.1rem !important;
+            color: #18181b !important;
+        }
+        /* Đảm bảo chữ trong card, result, code block đều tối */
+        .result-card, .result-label, .result-value, .unit-label,
+        .result-card-row, .stMarkdown, .stMarkdown p, .stMarkdown span, .stMarkdown div {
+            color: #18181b !important;
+        }
+        /* Style cho code block */
+        code, pre, .stCode, .stMarkdown code, .stMarkdown pre {
+            color: #18181b !important;
+            background: #f8fafc !important;
+            font-weight: 500 !important;
+            font-size: 1em !important;
+            border-radius: 6px !important;
         }
     </style>
-    """, unsafe_allow_html=True)
+""", unsafe_allow_html=True)
+
 def show(model_CS, model_ST, model_FC):
     st.markdown("---")
     st.markdown("### Concrete Matrix")
@@ -98,7 +111,6 @@ def show(model_CS, model_ST, model_FC):
     input_data = np.array([[W, C, S, CA, smax, SP, pf, Vf, df, Lf]])
 
     if st.button("🔍 Predict"):
-        # BỎ spinner và time.sleep hoàn toàn
         cs_pred = model_CS.predict(input_data)[0]
         st_pred = model_ST.predict(input_data)[0]
         fc_pred = model_FC.predict(input_data)[0]
@@ -131,5 +143,3 @@ def show(model_CS, model_ST, model_FC):
             """,
             unsafe_allow_html=True
         )
-
-
