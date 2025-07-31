@@ -9,7 +9,7 @@ import section_predict
 st.markdown("""
     <style>
     html, body, .block-container {
-        background: #f5f7fa !important;
+        background: #d8dee8 !important;
         color: #18181b !important;
     }
     h1, h2, h3, h4, h5, h6,
