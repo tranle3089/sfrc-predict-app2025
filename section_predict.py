@@ -34,6 +34,7 @@ st.markdown("""
         label, .stNumberInput label, .stSelectbox label {
             font-size: 20px !important;
             font-weight: 500;
+            color: #18181b!important;
             margin-bottom: 0.1rem !important;
         }
         .stNumberInput, .stSelectbox {
