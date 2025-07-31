@@ -9,6 +9,10 @@ st.markdown("""
             padding-left: 1.5rem !important;
             padding-right: 1.5rem !important;
         }
+        .result-card, .result-label, .result-value, .unit-label,
+        .result-card-row, .stMarkdown, .stMarkdown p, .stMarkdown span, .stMarkdown div {
+            color: #18181b !important;
+        }
         html, body, [class*="css"]  {
             font-size: 20px !important;
         }
