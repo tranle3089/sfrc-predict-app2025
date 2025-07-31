@@ -116,7 +116,7 @@ def show(model_CS, model_ST, model_FC):
         fc_pred = model_FC.predict(input_data)[0]
 
         st.markdown("""
-        <div style="background-color:#e6f9eb; border-radius: 13px; padding: 1.0rem 1.0rem; margin-bottom:1rem; color:#20723a; font-weight: 700; font-size: 1.1rem; border: 1.0px solid #74c99e;">
+        <div style="border-radius: 13px; padding: 1.0rem 1.0rem; margin-bottom:1rem; color:#20723a; font-weight: 700; font-size: 1.1rem; border: 1.0px solid #74c99e;">
             ✅ Results
         </div>
         """, unsafe_allow_html=True)
