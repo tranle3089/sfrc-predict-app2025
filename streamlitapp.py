@@ -7,137 +7,137 @@ import section_predict
 
 # ---------- Custom CSS for Expander Heading Colors ----------
 st.markdown("""
-    <style>
-    html, body, .block-container {
-        background: #d8dee8 !important;
-        color: #18181b !important;
-    }
-    h1, h2, h3, h4, h5, h6,
-    .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6,
-    .stMarkdown h1, .stMarkdown h2, .stMarkdown h3, .stMarkdown h4, .stMarkdown h5, .stMarkdown h6 {
-        color: #18181b !important;
-    }
-    /* ---- Label ---- */
-    label, .stNumberInput label, .stSelectbox label, 
-    div[data-testid="stNumberInputLabel"], div[data-testid="stSelectboxLabel"] {
-        color: #18181b !important;
-        font-size: 1.06rem !important;    
-        font-weight: 600 !important;
-    }
-    /* ---- Result card ---- */
+<style>
+html, body, .block-container {
+    background: #d8dee8 !important;
+    color: #18181b !important;
+}
+h1, h2, h3, h4, h5, h6,
+.stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6,
+.stMarkdown h1, .stMarkdown h2, .stMarkdown h3, .stMarkdown h4, .stMarkdown h5, .stMarkdown h6 {
+    color: #18181b !important;
+}
+/* ---- Label ---- */
+label, .stNumberInput label, .stSelectbox label, 
+div[data-testid="stNumberInputLabel"], div[data-testid="stSelectboxLabel"] {
+    color: #18181b !important;
+    font-size: 1.06rem !important;    
+    font-weight: 600 !important;
+}
+/* ---- Result card ---- */
+.result-card-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+}
+.result-card {
+    background: #fff;
+    border-radius: 17px;
+    padding: 1.0rem 1.1rem 0.7rem 1.1rem;
+    box-shadow: 0 2px 10px 0 rgba(70, 109, 236, 0.06), 0 1px 2px 0 rgba(0,0,0,0.02);
+    min-width: 150px;
+    max-width: 180px;
+    text-align: center;
+    border: 2px solid #2563eb;
+    transition: box-shadow 0.2s, transform 0.2s;
+    color: #18181b !important;
+}
+.result-card:hover {
+    box-shadow: 0 6px 30px 0 rgba(70,109,236,0.13);
+    transform: translateY(-2px) scale(1.04);
+}
+.result-label {
+    color: #2563eb;
+    font-size: 1.09rem;
+    font-weight: 800;
+    margin-bottom: 1.0rem;
+    letter-spacing: 0.5px;
+}
+.result-value {
+    color: #18181b;
+    font-size: 2.05rem;
+    font-weight: 900;
+    margin-bottom: 0.2rem;
+    letter-spacing: -2px;
+}
+.unit-label {
+    color: #b3b5ba;
+    font-size: 1.0rem;
+    margin-top: 0.4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+/* ---- Button ---- */
+.stButton>button {
+    font-size: 1.13rem !important; 
+    color: #fff !important;
+    background: #0e54cc !important;
+    border: none !important;
+    border-radius: 6px !important;
+    padding: 0.5rem 1.0rem !important;
+    font-weight: 800 !important;
+    transition: background 0.2s;
+    margin-top: 0.2rem !important;
+    margin-bottom: 0.2rem !important;
+}
+.stButton>button:hover {
+    background: #1d4ed8 !important;
+}
+/* -------- Expander section: chữ vừa phải, màu box đậm hơn -------- */
+div[data-testid="stExpander"] summary span {
+    font-size: 1.45rem !important;     
+    font-weight: 800 !important;
+    color: inherit !important;
+    letter-spacing: 0.4px;
+}
+/* Section 1 */
+div[data-testid="stExpander"]:nth-of-type(1) > details > summary {
+    background: linear-gradient(90deg, #74aaff 0%, #cce3fd 100%) !important;
+    color: #011c4f !important;
+    border-bottom: 2.5px solid #2563eb;
+    box-shadow: 0 2px 16px 0 #f5f1b8;
+}
+/* Section 2 */
+div[data-testid="stExpander"]:nth-of-type(2) > details > summary {
+    background: linear-gradient(90deg, #71d8af 0%, #d8f6e6 100%) !important;
+    color: #011c4f !important;
+    border-bottom: 2.5px solid #107143;
+    box-shadow: 0 2px 16px 0 #f5f1b8;
+}
+/* Section 3 */
+div[data-testid="stExpander"]:nth-of-type(3) > details > summary {
+    background: linear-gradient(90deg, #f7e997 0%, #f7e997 100%) !important;
+    color: #011c4f !important;
+    border-bottom: 2.5px solid #fb923c;
+    box-shadow: 0 2px 16px 0 #f5f1b8;
+}
+/* Section 4 */
+div[data-testid="stExpander"]:nth-of-type(4) > details > summary {
+    background: linear-gradient(90deg, #b0aaff 0%, #ede9fe 100%) !important;
+    color: #011c4f !important;
+    border-bottom: 2.5px solid #6366f1;
+    box-shadow: 0 2px 16px 0 #f5f1b8;
+}
+div[data-testid="stExpander"] {
+    border-radius: 14px !important;
+    overflow: hidden !important;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 2px 10px 0 rgba(31,38,135,0.06);
+    border: 2px solid #e5e7eb !important;
+}
+@media (max-width: 900px) {
     .result-card-row {
-        display: flex;
-        gap: 1.5rem;
-        margin-top: 1.5rem;
-        margin-bottom: 1.5rem;
-        justify-content: center;
+        flex-direction: column;
+        gap: 1.0rem;
     }
     .result-card {
-        background: #fff;
-        border-radius: 17px;
-        padding: 1.0rem 1.1rem 0.7rem 1.1rem;
-        box-shadow: 0 2px 10px 0 rgba(70, 109, 236, 0.06), 0 1px 2px 0 rgba(0,0,0,0.02);
-        min-width: 150px;
-        max-width: 180px;
-        text-align: center;
-        border: 2px solid #2563eb;
-        transition: box-shadow 0.2s, transform 0.2s;
-        color: #18181b !important;
+        min-width: unset;
     }
-    .result-card:hover {
-        box-shadow: 0 6px 30px 0 rgba(70,109,236,0.13);
-        transform: translateY(-2px) scale(1.04);
-    }
-    .result-label {
-        color: #2563eb;
-        font-size: 1.09rem;
-        font-weight: 800;
-        margin-bottom: 1.0rem;
-        letter-spacing: 0.5px;
-    }
-    .result-value {
-        color: #18181b;
-        font-size: 2.05rem;
-        font-weight: 900;
-        margin-bottom: 0.2rem;
-        letter-spacing: -2px;
-    }
-    .unit-label {
-        color: #b3b5ba;
-        font-size: 1.0rem;
-        margin-top: 0.4rem;
-        font-weight: 600;
-        letter-spacing: 1px;
-    }
-    /* ---- Button ---- */
-    .stButton>button {
-        font-size: 1.13rem !important; 
-        color: #fff !important;
-        background: #0e54cc !important;
-        border: none !important;
-        border-radius: 6px !important;
-        padding: 0.5rem 1.0rem !important;
-        font-weight: 800 !important;
-        transition: background 0.2s;
-        margin-top: 0.2rem !important;
-        margin-bottom: 0.2rem !important;
-    }
-    .stButton>button:hover {
-        background: #1d4ed8 !important;
-    }
-    /* -------- Expander section: chữ vừa phải, màu box đậm hơn -------- */
-    div[data-testid="stExpander"] summary span {
-        font-size: 1.45rem !important;     
-        font-weight: 800 !important;
-        color: inherit !important;
-        letter-spacing: 0.4px;
-    }
-    /* Section 1 */
-    div[data-testid="stExpander"]:nth-of-type(1) > details > summary {
-        background: linear-gradient(90deg, #74aaff 0%, #cce3fd 100%) !important;
-        color: #011c4f !important;
-        border-bottom: 2.5px solid #2563eb;
-        box-shadow: 0 2px 16px 0 #f5f1b8;
-    }
-    /* Section 2 */
-    div[data-testid="stExpander"]:nth-of-type(2) > details > summary {
-        background: linear-gradient(90deg, #71d8af 0%, #d8f6e6 100%) !important;
-        color: #011c4f !important;
-        border-bottom: 2.5px solid #107143;
-        box-shadow: 0 2px 16px 0 #f5f1b8;
-    }
-    /* Section 3 */
-    div[data-testid="stExpander"]:nth-of-type(3) > details > summary {
-        background: linear-gradient(90deg, #f7e997 0%, #f7e997 100%) !important;
-        color: #011c4f !important;
-        border-bottom: 2.5px solid #fb923c;
-        box-shadow: 0 2px 16px 0 #f5f1b8;
-    }
-    /* Section 4 */
-    div[data-testid="stExpander"]:nth-of-type(4) > details > summary {
-        background: linear-gradient(90deg, #b0aaff 0%, #ede9fe 100%) !important;
-        color: #011c4f !important;
-        border-bottom: 2.5px solid #6366f1;
-        box-shadow: 0 2px 16px 0 #f5f1b8;
-    }
-    div[data-testid="stExpander"] {
-        border-radius: 14px !important;
-        overflow: hidden !important;
-        margin-bottom: 1.2rem;
-        box-shadow: 0 2px 10px 0 rgba(31,38,135,0.06);
-        border: 2px solid #e5e7eb !important;
-    }
-    @media (max-width: 900px) {
-        .result-card-row {
-            flex-direction: column;
-            gap: 1.0rem;
-        }
-        .result-card {
-            min-width: unset;
-        }
-    }
-    </style>
-    """, unsafe_allow_html=True)
+}
+</style>
+""", unsafe_allow_html=True)
 
 
 # ----------------- Main Content -----------------
