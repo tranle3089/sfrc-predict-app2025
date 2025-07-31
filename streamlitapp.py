@@ -9,7 +9,13 @@ import section_predict
 st.markdown("""
 <style>
 .block-container {
-    background: #f5f7fa;
+    background: #f5f7fa !important;
+    box-shadow: 0 0 20px 0 rgba(45, 76, 151, 0.05), 0 1.5px 5px 0 rgba(160,180,215,0.03);
+    border-radius: 18px !important;
+    padding-top: 2.2rem !important;
+    padding-bottom: 1.2rem !important;
+    padding-left: 2.2rem !important;
+    padding-right: 2.2rem !important;
 }
 /* -------- Kết quả prediction card đẹp -------- */
 .result-card-row {
