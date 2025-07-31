@@ -112,7 +112,7 @@ div[data-testid="stExpander"] {
 
 st.markdown(
     """
-    <div style="font-size:2.2rem; font-weight:800; color:#18181b; margin-bottom:1em; letter-spacing:-1px;">
+    <div style="font-size:2.2rem; font-weight:800; color:#18181b; margin-top:1em; margin-bottom:0.25em; letter-spacing:-1px;">
         SFRC Strength Prediction App
     </div>
     """,
