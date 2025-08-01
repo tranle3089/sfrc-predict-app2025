@@ -151,7 +151,7 @@ st.markdown(
 
 st.markdown(
     """
-    <div style="font-size:1.1rem; text-align:justify; color:#18181b; margin-bottom:0.75em;">
+    <div style="font-size:1.1rem; text-align:justify; color:#18181b; margin-bottom:2em;">
         <em>This application provides rapid, reliable, and user-friendly predictions of the mechanical properties of steel fiber-reinforced concrete (SFRC), 
         including compressive, tensile, and flexural strength. With a focus on real-world applicability, the app integrates advanced machine learning models and 
         optimization techniques to aid material design, quality control, and structural assessment in engineering and construction. By offering instant, data-driven 
