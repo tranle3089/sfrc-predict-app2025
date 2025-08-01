@@ -152,7 +152,9 @@ st.markdown(
 st.markdown(
     """
     <div style="font-size:1.15rem; color:#18181b; margin-bottom:1.0em;">
-        <em>A novel hybrid machine learning framework for predicting the mechanical properties of steel fiber-reinforced concrete</em>
+        <em>This web application is designed to provide rapid, reliable, and user-friendly predictions of the mechanical properties of steel fiber-reinforced concrete (SFRC), 
+        including compressive, tensile, and flexural strength. With a focus on real-world applicability, the app integrates advanced machine learning models and optimization techniques to aid material design, quality control, and structural assessment in engineering and construction. By offering instant, data-driven estimations from customizable input parameters, it streamlines decision-making, 
+        supports the adoption of innovative materials, and boosts productivity in both research and industry settings.</em>
     </div>
     """,
     unsafe_allow_html=True
