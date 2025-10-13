@@ -5,16 +5,14 @@ def show():
     diagram = """
 Machine Learning Model Selection
 
-- Regression based algorithms
+Regression based algorithms
     - Adaboost
     - Catboost
     - XGboost
-
-- Tree based algorithms
+Tree based algorithms
     - Extra tree
     - Random forest
-
-- Neural based algorithm
+Neural based algorithm
     - Artificial Neural Network
 """
 
@@ -37,3 +35,4 @@ Machine Learning Model Selection
 
     # Hiển thị sơ đồ chữ trong Streamlit
     st.markdown(f"<div class='diagram-box'>{diagram}</div>", unsafe_allow_html=True)
+
