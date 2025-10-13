@@ -2,43 +2,56 @@ import streamlit as st
 
 def show():
     dot = r'''
-    digraph G {
+    digraph ML_Selection_Custom {
       rankdir=TB;
+      nodesep=0.35; ranksep=0.6;
       splines=true;
-      nodesep=0.35; ranksep=0.5;
 
-      node [shape=box, style="rounded,filled", fillcolor="#f8f9fa", color="#9aa0a6", fontname="Arial", fontsize=12];
-      edge [color="#cfd2d6"];
+      // Default node + edge styles
+      node [shape=box, style="rounded,filled", fillcolor="white", color="#000000",
+            fontname="Arial", fontsize=12];
+      edge [style=invis];  // chỉ dùng để sắp xếp dọc, không vẽ mũi tên
 
-      root [label="Materials and Methods", fillcolor="#e8f0fe"];
+      // ===== Cluster 1: Regression based algorithms =====
+      subgraph cluster_reg {
+        label="Regression based algorithms";
+        labelloc=t; fontsize=12; fontname="Arial";
+        style="rounded,dashed"; color="#7a7a7a";
+        bgcolor="#eef6ea"; // nền xanh nhạt như hình
 
-      root -> ml;
-      root -> opt;
-      root -> dev;
+        reg1 [label="Adaboost"];
+        reg2 [label="Catboost"];
+        reg3 [label="XGboost"];
 
-      ml  [label="Machine Learning\nModel Selection"];
-      opt [label="Optimization Using\nTPE Method"];
-      dev [label="Predictive Model\nDevelopment"];
+        // sắp xếp theo cột
+        reg1 -> reg2 -> reg3;
+      }
 
-      ml  -> reg;
-      ml  -> treealg;
-      ml  -> nn;
+      // ===== Cluster 2: Tree based algorithms =====
+      subgraph cluster_tree {
+        label="Tree based algorithms";
+        labelloc=t; fontsize=12; fontname="Arial";
+        style="rounded,dashed"; color="#7a7a7a";
+        bgcolor="#eef6ea";
 
-      opt -> bo;
-      opt -> tpe;
+        tree1 [label="Extra tree"];
+        tree2 [label="Random forest"];
 
-      dev -> train;
-      dev -> metrics;
+        tree1 -> tree2;
+      }
 
-      reg     [label="Regression Algorithms"];
-      treealg [label="Tree-Based Algorithms"];
-      nn      [label="Neural Network Algorithms"];
+      // ===== Cluster 3: Neural based algorithm =====
+      subgraph cluster_nn {
+        label="Neural based algorithm";
+        labelloc=t; fontsize=12; fontname="Arial";
+        style="rounded,dashed"; color="#7a7a7a";
+        bgcolor="#eef6ea";
 
-      bo  [label="Bayesian Optimization"];
-      tpe [label="Tree-Structured Parzen\nEstimator (TPE)"];
+        nn1 [label="Extra tree"];
+      }
 
-      train   [label="Training & Hyperparameter Tuning"];
-      metrics [label="Performance Evaluation Metrics"];
+      // giữ thứ tự từ trên xuống dưới giữa các cụm
+      {rank=same; } // placeholder
     }
     '''
     st.graphviz_chart(dot)
