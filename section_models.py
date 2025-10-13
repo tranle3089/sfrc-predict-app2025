@@ -9,18 +9,18 @@ def show():
 
       // ===== CÀI ĐẶT CHUNG =====
       graph [
-        bgcolor="white",
+        bgcolor="lightblue",
         label="Machine Learning Model Selection",
         labelloc=t,
-        fontsize=16,
-        fontname="Arial Bold"
+        fontsize=18,
+        fontname="Times New Roman Bold"
       ];
 
       node [
         shape=box,
         style="rounded",
         color="#333333",
-        fontname="Arial",
+        fontname="Times New Roman",
         fontsize=12
       ];
 
@@ -34,7 +34,7 @@ def show():
         label="Regression based algorithms";
         labelloc=t;
         fontsize=12;
-        fontname="Arial";
+        fontname="Times New Roman";
         style="rounded,dashed";
         color="#777777";
 
@@ -50,7 +50,7 @@ def show():
         label="Tree based algorithms";
         labelloc=t;
         fontsize=12;
-        fontname="Arial";
+        fontname="Times New Roman";
         style="rounded,dashed";
         color="#777777";
 
@@ -65,7 +65,7 @@ def show():
         label="Neural based algorithm";
         labelloc=t;
         fontsize=12;
-        fontname="Arial";
+        fontname="Times New Roman";
         style="rounded,dashed";
         color="#777777";
 
@@ -74,4 +74,5 @@ def show():
     }
     '''
     st.graphviz_chart(dot)
+
 
