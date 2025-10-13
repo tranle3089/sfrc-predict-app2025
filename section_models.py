@@ -45,13 +45,7 @@ def show():
         
         nn1 [label="Extra tree"];
       }
-
-      // ===== Bố cục trái → phải (nhiều → ít) =====
-      {rank=same; cluster_reg; cluster_tree; cluster_nn;}
-
-      // ===== Mũi tên luồng giữa các nhóm =====
-      reg3 -> tree1 [color="#999999", penwidth=1.3];
-      tree2 -> nn1 [color="#999999", penwidth=1.3];
     }
     '''
     st.graphviz_chart(dot)
+
