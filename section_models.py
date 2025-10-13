@@ -1,43 +1,43 @@
 import streamlit as st
 
 def show():
-    # Nội dung sơ đồ dạng chữ
-    diagram = """
-Machine Learning Model Selection
+    # Nội dung hiển thị dạng chữ
+    text_content = """
+ Regression based algorithms
+        - Adaboost
+        - Catboost
+        - XGboost
 
-Regression based algorithms
-    - Adaboost
-    - Catboost
-    - XGboost
+ Tree based algorithms
+        - Extra tree
+        - Random forest
 
-Tree based algorithms
-    - Extra tree
-    - Random forest
-
-Neural based algorithm
-    - Artificial Neural Network
+ Neural based algorithm
+        - Artificial Neural Network
 """
 
-    # CSS định dạng hiển thị: Times New Roman, size 16, nền trắng, chữ đen
+    # CSS định dạng Times New Roman, tiêu đề lớn, nội dung nhỏ hơn
     st.markdown("""
         <style>
-        .diagram-box {
+        .heading {
+            font-family: 'Times New Roman', serif;
+            font-size: 22px;
+            font-weight: bold;
+            color: black;
+            background-color: white;
+            margin-bottom: 15px;
+        }
+        .text-content {
             font-family: 'Times New Roman', serif;
             font-size: 16px;
             color: black;
             background-color: white;
-            padding: 25px;
-            border-radius: 8px;
-            border: 1px solid #cccccc;
             line-height: 1.6;
-            white-space: pre-wrap;
-        }
-        strong {
-            font-weight: bold;
-            font-size: 18px;
+            padding-left: 10px;
         }
         </style>
     """, unsafe_allow_html=True)
 
-    # Hiển thị sơ đồ chữ trong Streamlit
-    st.markdown(f"<div class='diagram-box'>{diagram}</div>", unsafe_allow_html=True)
+    # Hiển thị tiêu đề và nội dung
+    st.markdown("<div class='heading'>Machine Learning Model Selection</div>", unsafe_allow_html=True)
+    st.markdown(f"<div class='text-content'>{text_content}</div>", unsafe_allow_html=True)
