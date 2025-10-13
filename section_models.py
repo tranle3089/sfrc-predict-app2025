@@ -3,17 +3,18 @@ import streamlit as st
 def show():
     # Nội dung hiển thị dạng chữ
     diagram = """
-- Regression based algorithms
-    - Adaboost
-    - Catboost
-    - XGboost
 
-- Tree based algorithms
-    - Extra tree
-    - Random forest
+Regression based algorithms
+        - Adaboost
+        - Catboost
+        - XGboost
 
-- Neural based algorithm
-    - Artificial Neural Network
+Tree based algorithms
+        - Extra tree
+        - Random forest
+
+Neural based algorithm
+        - Artificial Neural Network
 """
 
     # CSS định dạng Times New Roman, tiêu đề lớn, nội dung nhỏ hơn
@@ -41,3 +42,4 @@ def show():
     # Hiển thị tiêu đề và nội dung
     st.markdown("<div class='heading'>Machine Learning Model Selection</div>", unsafe_allow_html=True)
     st.markdown(f"<div class='text-content'>{diagram}</div>", unsafe_allow_html=True)
+
