@@ -3,20 +3,22 @@ import streamlit as st
 def show():
     # Nội dung sơ đồ dạng chữ
     diagram = """
-Machine Learning Model Selection
+**Machine Learning Model Selection**
 
-Regression based algorithms
+- Regression based algorithms
     - Adaboost
     - Catboost
     - XGboost
-Tree based algorithms
+
+- Tree based algorithms
     - Extra tree
     - Random forest
-Neural based algorithm
+
+- Neural based algorithm
     - Artificial Neural Network
 """
 
-    # CSS định dạng hiển thị: Times New Roman, size 16, nền trắng, chữ đen
+    # CSS định dạng hiển thị
     st.markdown("""
         <style>
         .diagram-box {
@@ -30,9 +32,11 @@ Neural based algorithm
             line-height: 1.6;
             white-space: pre-wrap;
         }
+        strong, b {
+            font-weight: bold;
+        }
         </style>
     """, unsafe_allow_html=True)
 
-    # Hiển thị sơ đồ chữ trong Streamlit
+    # Hiển thị sơ đồ trong Streamlit
     st.markdown(f"<div class='diagram-box'>{diagram}</div>", unsafe_allow_html=True)
-
