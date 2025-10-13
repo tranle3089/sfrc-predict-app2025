@@ -39,4 +39,6 @@ def show():
     # Hiển thị tiêu đề và nội dung
     st.markdown("<div class='heading'>Machine Learning Model Selection</div>", unsafe_allow_html=True)
     st.markdown(f"<div class='text-content'>{text_content}</div>", unsafe_allow_html=True)
+    st.markdown(f"<div class='diagram-box'>{diagram}</div>", unsafe_allow_html=True)
+
 
