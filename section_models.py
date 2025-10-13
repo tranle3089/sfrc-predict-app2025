@@ -1,32 +1,44 @@
 import streamlit as st
 
 def show():
-    st.markdown("""
-    <ul style="list-style-type:none; margin-left:0; padding-left:0;">
-      <li><b>Materials and Methods</b>
-        <ul style="list-style-type:none; margin-left:0; padding-left:15px;">
-          <li>2.1 Data Collection</li>
-          <li>2.2 Data Preprocessing</li>
-          <li>2.3 Machine Learning Model Selection
-            <ul style="list-style-type:none; margin-left:0; padding-left:25px;">
-              <li>2.3.1 Regression Algorithms</li>
-              <li>2.3.2 Tree-Based Algorithms</li>
-              <li>2.3.3 Neural Network Algorithms</li>
-            </ul>
-          </li>
-          <li>2.4 Optimization Using TPE Method
-            <ul style="list-style-type:none; margin-left:0; padding-left:25px;">
-              <li>2.4.1 Bayesian Optimization</li>
-              <li>2.4.2 Tree-Structured Parzen Estimator (TPE)</li>
-            </ul>
-          </li>
-          <li>2.5 Predictive Model Development
-            <ul style="list-style-type:none; margin-left:0; padding-left:25px;">
-              <li>2.5.1 Training and Hyperparameter Tuning</li>
-              <li>2.5.2 Performance Evaluation Metrics</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-    """, unsafe_allow_html=True)
+    dot = r'''
+    digraph G {
+      rankdir=TB;
+      splines=true;
+      nodesep=0.35; ranksep=0.5;
+
+      node [shape=box, style="rounded,filled", fillcolor="#f8f9fa", color="#9aa0a6", fontname="Arial", fontsize=12];
+      edge [color="#cfd2d6"];
+
+      root [label="Materials and Methods", fillcolor="#e8f0fe"];
+
+      root -> ml;
+      root -> opt;
+      root -> dev;
+
+      ml  [label="Machine Learning\nModel Selection"];
+      opt [label="Optimization Using\nTPE Method"];
+      dev [label="Predictive Model\nDevelopment"];
+
+      ml  -> reg;
+      ml  -> treealg;
+      ml  -> nn;
+
+      opt -> bo;
+      opt -> tpe;
+
+      dev -> train;
+      dev -> metrics;
+
+      reg     [label="Regression Algorithms"];
+      treealg [label="Tree-Based Algorithms"];
+      nn      [label="Neural Network Algorithms"];
+
+      bo  [label="Bayesian Optimization"];
+      tpe [label="Tree-Structured Parzen\nEstimator (TPE)"];
+
+      train   [label="Training & Hyperparameter Tuning"];
+      metrics [label="Performance Evaluation Metrics"];
+    }
+    '''
+    st.graphviz_chart(dot)
