@@ -16,9 +16,12 @@ def show():
             color: #000;
             line-height: 1.6;
             background: #fff;
-            padding-left: 22px;  /* thụt vào một chút cho đẹp */
+            padding-left: 22px;  /* thụt lề */
         }
-        .ml-list ul { margin: 0 0 14px 0; }      /* khoảng cách giữa các nhóm */
+        .ml-list ul {
+            margin: 0 0 14px 0;
+            list-style-type: none;  /* loại bỏ dấu chấm đầu dòng */
+        }
         .ml-list li { margin: 2px 0; }
         </style>
     """, unsafe_allow_html=True)
