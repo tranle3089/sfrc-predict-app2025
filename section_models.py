@@ -1,45 +1,57 @@
 import streamlit as st
 
 def show():
-    # Nội dung hiển thị dạng chữ
-    diagram = """
-
-Regression based algorithms
-        - Adaboost
-        - Catboost
-        - XGboost
-
-Tree based algorithms
-        - Extra tree
-        - Random forest
-
-Neural based algorithm
-        - Artificial Neural Network
-"""
-
-    # CSS định dạng Times New Roman, tiêu đề lớn, nội dung nhỏ hơn
     st.markdown("""
         <style>
-        .heading {
+        .ml-title {
             font-family: 'Times New Roman', serif;
             font-size: 22px;
             font-weight: bold;
-            color: black;
-            background-color: white;
-            margin-bottom: 15px;
+            color: #000;
+            margin: 0 0 14px 0;
         }
-        .text-content {
+        .ml-list {
             font-family: 'Times New Roman', serif;
             font-size: 16px;
-            color: black;
-            background-color: white;
+            color: #000;
             line-height: 1.6;
-            padding-left: 10px;
+            background: #fff;
+            padding-left: 22px;  /* thụt vào một chút cho đẹp */
         }
+        .ml-list ul { margin: 0 0 14px 0; }      /* khoảng cách giữa các nhóm */
+        .ml-list li { margin: 2px 0; }
         </style>
     """, unsafe_allow_html=True)
 
-    # Hiển thị tiêu đề và nội dung
-    st.markdown("<div class='heading'>Machine Learning Model Selection</div>", unsafe_allow_html=True)
-    st.markdown(f"<div class='text-content'>{diagram}</div>", unsafe_allow_html=True)
+    st.markdown("<div class='ml-title'>Machine Learning Model Selection</div>", unsafe_allow_html=True)
 
+    st.markdown("""
+    <div class="ml-list">
+      <ul>
+        <li>Regression based algorithms
+          <ul>
+            <li>Adaboost</li>
+            <li>Catboost</li>
+            <li>XGboost</li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul>
+        <li>Tree based algorithms
+          <ul>
+            <li>Extra tree</li>
+            <li>Random forest</li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul>
+        <li>Neural based algorithm
+          <ul>
+            <li>Artificial Neural Network</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    """, unsafe_allow_html=True)
